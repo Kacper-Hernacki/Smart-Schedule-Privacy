@@ -3,7 +3,7 @@
   "public": true,
   "builds": [
     {
-      "src": "Privacy/**",
+      "src": "**",
       "use": "@vercel/static"
     }
   ],
@@ -15,11 +15,11 @@
     },
     {
       "src": "/index.html",
-      "dest": "/Privacy/index.html"
+      "dest": "/index.html"
     },
     {
       "src": "/(.*)",
-      "dest": "/Privacy/$1"
+      "dest": "/$1"
     }
   ]
 }
