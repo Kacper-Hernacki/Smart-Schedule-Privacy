@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "public": true,
+  "builds": [
+    {
+      "src": "Privacy/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "status": 301,
+      "headers": { "Location": "/index.html" }
+    },
+    {
+      "src": "/index.html",
+      "dest": "/Privacy/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/Privacy/$1"
+    }
+  ]
+}
